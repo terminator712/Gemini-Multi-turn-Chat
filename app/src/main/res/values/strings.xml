@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">GenerativeAISample</string>
+    <string name="action_go">Go</string>
+    <string name="summarize_hint">Enter your message here</string>
+    <!-- Chat sample strings -->
+    <string name="chat_label">Message</string>
+    <string name="action_send">Send</string>
+</resources>
