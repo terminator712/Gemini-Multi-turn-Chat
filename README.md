@@ -8,12 +8,12 @@ Sample android app with GeminiPro for multi-turn conversation which supports tex
 How to setup: 
 1. Import released AAR in your project[Or download module]. How to - https://developer.android.com/studio/projects/android-library#psd-add-aar-jar-dependency
 2. Go to **https://aistudio.google.com/** and get your API key
-3. In your `local.properties` insert it like this: apiKey=YOUR_API_KEY
-4. Initiate inerator like this: `val interactor = Interactor.getInstance(WeakReference(this))`
+3. In your `local.properties` insert the key like this: `apiKey=YOUR_API_KEY`
+4. Initiate interator like this: `val interactor = Interactor.getInstance(WeakReference(this))`
 5. Init the chat and get UIState: `val uiState = interactor.initChat(BuildConfig.apiKey, safetySetting /*optional*/)`
     You can customize your safetySetting like this :
    
-       `val safetySetting = listOf(
+       val safetySetting = listOf(
             SafetySetting(
                 harmCategory = HarmCategory.HARASSMENT,
                 threshold = BlockThreshold.MEDIUM_AND_ABOVE
@@ -30,7 +30,7 @@ How to setup:
                 harmCategory = HarmCategory.SEXUALLY_EXPLICIT,
                 threshold = BlockThreshold.LOW_AND_ABOVE
             )
-        )`
+        )
 6. To send message: `interactor.sendMessage(message, images /*optional can be empty*/)`. UIState will be get updated when the response of model arrives. 
 7. Build project and run!
     
